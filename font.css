@@ -1,0 +1,49 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #333;
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+.section p {
+    line-height: 1.6;
+}
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+.contact-info li {
+    margin-bottom: 10px;
+}
+.contact-info a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.profile-pic {
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 50%; /* Hace la imagen circular, opcional */
+}
+
