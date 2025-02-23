@@ -19,6 +19,16 @@ else
     cd "$repo_direction"
 fi
 
+# Configurar NGINX para servir el repositorio
+nginx_config="/etc/nginx/sites-available/default"
+if grep -q "root /var/www/plantilla;" "$nginx_config"; then
+    echo "La configuración de NGINX ya está actualizada."
+else
+    echo "Actualizando la configuración de NGINX..."
+    sudo sed -i 's|root /var/www/html;|root /var/www/plantilla;|' "$nginx_config"
+    sudo nginx -t && sudo systemctl restart nginx
+fi
+
 # Iniciar NGINX
 echo "Iniciando NGINX..."
 sudo systemctl start nginx
