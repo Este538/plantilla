@@ -20,6 +20,7 @@ else
 fi
 
 # Configurar NGINX para servir el repositorio
+#hubo un detalle con la instalación, el sistema lo catalogo como root al usuario en vez de ELFO
 nginx_config="/etc/nginx/sites-available/default"
 if grep -q "root /var/www/plantilla;" "$nginx_config"; then
     echo "La configuración de NGINX ya está actualizada."
